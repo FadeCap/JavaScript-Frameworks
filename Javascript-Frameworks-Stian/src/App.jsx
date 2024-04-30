@@ -1,17 +1,15 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 
-function App() {
+function Nav() {
 
   return (
     <>
-    <layout>
       <div>
         <h1>Hello world</h1>
       </div>
-    </layout>
     </>
   )
 }
 
-export default App
+export default Nav
