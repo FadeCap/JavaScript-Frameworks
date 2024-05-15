@@ -12,7 +12,7 @@ function HomePage() {
       ) : error ? (
         <p>Error: {error}</p>
       ) : (
-        <div className="cards-container">
+        <div className="cards-container grid md:grid-cols-3 gap-4">
           {data.map((product) => (
             <Card key={product.id} product={product} />
           ))}

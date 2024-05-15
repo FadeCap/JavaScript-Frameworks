@@ -1,7 +1,7 @@
 export default function Button() {
     return (
-        <button className="button bg-white text-black p-3 m-3">
-            Button
+        <button className="button p-3 m-3 text-white bg-green-500">
+            Check it out!
         </button>
     )
 }

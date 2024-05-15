@@ -15,11 +15,11 @@ export default function Navbar() {
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             width="35px"
             height="35px"
             viewBox="0 0 902.86 902.86"
-            xml:space="preserve"
+            xmlSpace="preserve"
           >
             <g>
               <g>

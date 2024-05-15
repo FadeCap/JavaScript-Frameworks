@@ -15,7 +15,6 @@ const useFetchData = (url) => {
         const jsonData = await response.json();
         setData(jsonData.data);
 
-        // Log the fetched data
         console.log("Fetched data:", jsonData.data);
       } catch (error) {
         setError(error.message);
@@ -27,7 +26,6 @@ const useFetchData = (url) => {
     fetchData();
 
     return () => {
-      // Cleanup function
     };
   }, [url]);
 
