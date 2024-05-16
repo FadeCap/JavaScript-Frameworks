@@ -1,16 +1,9 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
-export default function Navbar() {
-  return (
-    <nav className="nav flex justify-between gap-2 px-2">
-      <Link to="/" className="site-title">
-        Site Name
-      </Link>
-      <ul className="navLinks flex p-0 m-0 gap-4 list-none">
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/Checkout">Checkout</CustomLink>
-        <CustomLink to="/Cart">
-          <svg
+export default function CartButton() {
+
+    return(
+    <div className="cart-button">
+        <svg
             fill="#ffff"
             version="1.1"
             id="Capa_1"
@@ -39,21 +32,6 @@ export default function Navbar() {
               </g>
             </g>
           </svg>
-        </CustomLink>
-      </ul>
-    </nav>
-  );
-}
-
-function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-
-  return (
-    <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
-  );
+    </div>
+    )
 }

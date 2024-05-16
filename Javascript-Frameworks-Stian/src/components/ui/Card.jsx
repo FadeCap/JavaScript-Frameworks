@@ -1,12 +1,11 @@
 import Button from "./Button";
 
 export default function Card({ product }) {
-
   const percentageDiscount =
     ((product.price - product.discountedPrice) / product.price) * 100;
 
   return (
-    <div className="Card flex-wrap text-center justify-center  m-3 max-w-96 bg-white rounded-md text-black">
+    <div className="Card flex-wrap text-center justify-center  m-3 max-w-96 bg-white rounded-md text-black shadow">
       <div className="relative">
         {percentageDiscount > 0 && (
           <div className="absolute top-0 right-0 bg-red-500 text-white py-1 px-2 rounded-tr-md rounded-bl-md">
