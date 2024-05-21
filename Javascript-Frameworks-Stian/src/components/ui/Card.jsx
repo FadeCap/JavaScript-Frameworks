@@ -5,7 +5,7 @@ export default function Card({ product }) {
     ((product.price - product.discountedPrice) / product.price) * 100;
 
   return (
-    <div className="Card flex-wrap text-center justify-center  m-3 max-w-96 bg-white rounded-md text-black shadow">
+    <div className="Card flex-wrap text-center justify-center m-3 max-w-96 bg-white rounded-md text-black shadow">
       <div className="relative">
         {percentageDiscount > 0 && (
           <div className="absolute top-0 right-0 bg-red-500 text-white py-1 px-2 rounded-tr-md rounded-bl-md">
@@ -32,7 +32,7 @@ export default function Card({ product }) {
         <p className="p-3">Rating: {product.rating}</p>
         <p className="p-2">Tags: {product.tags.join(", ")}</p>
         <div className="p-4 m-4">
-        <Button />
+          <Button productId={product.id} />
         </div>
       </div>
     </div>

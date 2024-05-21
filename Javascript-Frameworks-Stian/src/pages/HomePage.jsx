@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Card from "../components/ui/Card.jsx";
-import useFetchData from "../components/services/api/FetchData.jsx";
-import SearchBar from "../components/SearchBar/SearchBar.jsx";
+import React, { useState, useEffect } from 'react';
+import Card from '../components/ui/Card.jsx';
+import useFetchData from '../components/services/api/FetchData.jsx';
+import SearchBar from '../components/SearchBar/SearchBar.jsx';
 
 function HomePage() {
-  const { data, loading, error } = useFetchData("https://v2.api.noroff.dev/online-shop/");
+  const { data, loading, error } = useFetchData('https://v2.api.noroff.dev/online-shop/');
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,6 @@ function HomePage() {
       setFilteredProducts(data);
     }
   };
-  
 
   return (
     <div>
