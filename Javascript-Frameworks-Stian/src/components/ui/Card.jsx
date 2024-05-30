@@ -1,4 +1,4 @@
-import Button from "./Button";
+import ProductButton from "./ProductButton.jsx"
 
 export default function Card({ product }) {
   const percentageDiscount =
@@ -32,7 +32,7 @@ export default function Card({ product }) {
         <p className="p-3">Rating: {product.rating}</p>
         <p className="p-2">Tags: {product.tags.join(", ")}</p>
         <div className="p-4 m-4">
-          <Button productId={product.id} />
+          <ProductButton productId={product.id} />
         </div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useCart } from "../components/services/CartContext.jsx"
 
 function ProductPage() {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { addToCart } = useCart(); // Get the addToCart function from the context
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -28,6 +30,12 @@ function ProductPage() {
 
     fetchProduct();
   }, [productId]);
+
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product);
+    }
+  };
 
   if (loading) {
     return <p>Loading...</p>;
@@ -66,6 +74,12 @@ function ProductPage() {
           </p>
           <p className="mb-4">Rating: {product.rating}</p>
           <p className="mb-4">Tags: {product.tags ? product.tags.join(', ') : 'No tags available'}</p>
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+            onClick={handleAddToCart}
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
