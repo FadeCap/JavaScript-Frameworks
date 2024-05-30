@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCart } from "../components/services/CartContext.jsx"
-
+import { calculatePercentageDiscount } from '../components/Utils/PercentageDiscount.jsx';
 
 function ProductPage() {
   const { productId } = useParams();
@@ -51,16 +51,26 @@ function ProductPage() {
     return <p>No product found</p>;
   }
 
-  
+  const percentageDiscount = calculatePercentageDiscount(
+    product.price,
+    product.discountedPrice
+  );
 
   return (
     <div className="product-container mx-auto p-4">
       <div className="flex flex-col md:flex-row items-center md:items-start">
-        <div className="w-full md:w-1/2 p-4">
-          {product.image && product.image.url && (
-            <img className="rounded shadow-md max-h-400" src={product.image.url} alt={product.image.alt || 'Product image'} />
-          )}
-        </div>
+      <div className="relative">
+        {percentageDiscount > 0 && (
+          <div className="absolute top-0 right-0 bg-red-500 text-white py-1 px-2 rounded-tr-md rounded-bl-md">
+            {Math.round(percentageDiscount)}% off
+          </div>
+        )}
+        <img
+          className="image rounded h-80 mb-4"
+          src={product.image.url}
+          alt={product.image.alt}
+        />
+      </div>
         <div className="w-full md:w-1/2 p-4">
           <h2 className="text-2xl font-bold mb-4">{product.title}</h2>
           <p className="mb-4">{product.description}</p>

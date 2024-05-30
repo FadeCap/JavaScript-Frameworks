@@ -1,8 +1,12 @@
 import ProductButton from "./ProductButton.jsx"
+import { calculatePercentageDiscount } from "../Utils/PercentageDiscount.jsx";
 
 export default function Card({ product }) {
-  const percentageDiscount =
-    ((product.price - product.discountedPrice) / product.price) * 100;
+  const percentageDiscount = calculatePercentageDiscount(
+    product.price,
+    product.discountedPrice
+  )
+    
 
   return (
     <div className="Card flex-wrap text-center justify-center m-3 max-w-96 bg-white rounded-md text-black shadow">
