@@ -10,8 +10,11 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (itemId) => {
-    const updatedCart = cart.filter(item => item.id !== itemId);
-    setCart(updatedCart);
+    const newCart = [...cart]
+    const firstIndex = cart.findIndex(item => item.id === itemId)
+    const updatedCart = newCart.splice(firstIndex, 1);
+    console.log(updatedCart)
+    setCart(newCart);
   };
 
   const clearCart = () => {
