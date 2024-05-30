@@ -10,10 +10,9 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (itemId) => {
-    const newCart = [...cart]
-    const firstIndex = cart.findIndex(item => item.id === itemId)
-    const updatedCart = newCart.splice(firstIndex, 1);
-    console.log(updatedCart)
+    const newCart = [...cart];
+    const firstIndex = cart.findIndex(item => item.id === itemId);
+    newCart.splice(firstIndex, 1);
     setCart(newCart);
   };
 
