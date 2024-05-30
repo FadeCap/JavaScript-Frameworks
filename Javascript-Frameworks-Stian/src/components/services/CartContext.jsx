@@ -10,17 +10,16 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (itemId) => {
-    const indexToRemove = cart.findIndex(item => item.id === itemId);
-    if (indexToRemove !== -1) {
-      const updatedCart = [...cart];
-      updatedCart.splice(indexToRemove, 1);
-      setCart(updatedCart);
-    }
+    const updatedCart = cart.filter(item => item.id !== itemId);
+    setCart(updatedCart);
   };
-  
+
+  const clearCart = () => {
+    setCart([]);
+  };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );
