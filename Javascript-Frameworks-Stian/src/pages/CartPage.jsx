@@ -19,7 +19,6 @@ export default function CartPage() {
             {cart.map((item, index) => (
               <li key={index} className="mb-4">
                 <h3 className="text-xl font-bold">{item.title}</h3>
-                <p>{item.description}</p>
                 <p>Price: ${item.discountedPrice || item.price}</p>
                 <button
                   className="bg-red-500 text-white px-4 py-2 rounded"

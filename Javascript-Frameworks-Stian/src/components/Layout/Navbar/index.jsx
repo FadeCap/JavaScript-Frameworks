@@ -9,13 +9,11 @@ export default function Navbar() {
         FadeShop
       </Link>
       <ul className="navLinks flex p-0 m-0 gap-4 list-none">
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/Cart">
+        <CustomLink to="/" className="nav-link">Home</CustomLink>
+        <li className="nav-link">
           <CartButton />
-        </CustomLink>
+        </li>
       </ul>
     </nav>
   );
 }
-
-
