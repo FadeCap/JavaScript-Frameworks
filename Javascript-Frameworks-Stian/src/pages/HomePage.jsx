@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/ui/Card.jsx';
-import useFetchData from '../components/services/api/FetchData.jsx';
+import useFetchData from '../components/services/FetchData';
 import SearchBar from '../components/SearchBar/SearchBar.jsx';
 
 function HomePage() {

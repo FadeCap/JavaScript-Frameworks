@@ -5,7 +5,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import CartPage from "./pages/CartPage";
 import HomePage from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
-import { CartProvider } from "./components/services/CartContext.jsx"
+import { CartProvider } from "./components/services/CartContext/index.jsx"
 import "./App.css";
 
 function App() {

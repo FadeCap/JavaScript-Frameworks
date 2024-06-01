@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useCart } from "../components/services/CartContext.jsx"
+import { useCart } from "../components/services/CartContext/index.jsx"
 import { calculatePercentageDiscount } from '../components/Utils/PercentageDiscount.jsx';
 
 function ProductPage() {
@@ -8,7 +8,7 @@ function ProductPage() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { addToCart } = useCart(); // Get the addToCart function from the context
+  const { addToCart } = useCart(); 
 
   useEffect(() => {
     const fetchProduct = async () => {

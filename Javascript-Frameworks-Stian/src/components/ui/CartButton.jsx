@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useCart } from "../services/CartContext.jsx";
+import { useCart } from "../services/CartContext/index.jsx";
 
 export default function CartButton() {
   const { cart } = useCart();
