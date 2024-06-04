@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/ui/Card.jsx';
 import useFetchData from '../components/services/FetchData';
-import SearchBar from '../components/SearchBar/SearchBar.jsx';
+import SearchBar from '../components/SearchBar';
 
 function HomePage() {
   const { data, loading, error } = useFetchData('https://v2.api.noroff.dev/online-shop/');
