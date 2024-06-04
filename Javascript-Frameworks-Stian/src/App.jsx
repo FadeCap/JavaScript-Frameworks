@@ -1,9 +1,10 @@
 import React from "react";
 import Layout from "./components/Layout";
-import ProductPage from "./pages/ProductPage";
-import CheckoutPage from "./pages/CheckoutPage";
-import CartPage from "./pages/CartPage";
-import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/Product";
+import CheckoutPage from "./pages/Checkout";
+import CartPage from "./pages/Cart";
+import ContactPage from "./pages/Contact";
+import HomePage from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import { CartProvider } from "./components/services/CartContext/index.jsx"
 import "./App.css";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Checkout" element={<CheckoutPage />} />
           <Route path="/Cart" element={<CartPage />} />
           <Route path="/product/:productId" element={<ProductPage />} />
+          <Route path="/Contact" element={<ContactPage />} />
         </Routes>
       </div>
     </CartProvider>
