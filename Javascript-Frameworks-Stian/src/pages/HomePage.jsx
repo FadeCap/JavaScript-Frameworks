@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../components/ui/Card.jsx';
+import Card from '../components/ui/Card';
 import useFetchData from '../components/services/FetchData';
 import SearchBar from '../components/SearchBar';
 

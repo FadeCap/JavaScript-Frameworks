@@ -1,5 +1,5 @@
-import ProductButton from "./ProductButton.jsx"
-import { calculatePercentageDiscount } from "../Utils/PercentageDiscount.jsx";
+import ProductButton from "../ProductsCardButton"
+import { calculatePercentageDiscount } from "../../Utils/PercentageDiscount";
 
 export default function Card({ product }) {
   const percentageDiscount = calculatePercentageDiscount(

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useCart } from "../components/services/CartContext/index.jsx"
-import { calculatePercentageDiscount } from '../components/Utils/PercentageDiscount.jsx';
+import { useCart } from "../components/services/CartContext"
+import { calculatePercentageDiscount } from '../components/Utils/PercentageDiscount';
 
 function ProductPage() {
   const { productId } = useParams();
