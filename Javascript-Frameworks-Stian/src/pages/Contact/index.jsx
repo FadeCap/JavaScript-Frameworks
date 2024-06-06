@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function ContactPage() {
     return (
         <div className="container flex justify-center align-center">
-            <form className="w-full max-w-sm" action="#" method="POST">
+            <form className="w-full max-w-sm" action="/" method="POST">
                 <div>
                     <label htmlFor="name">Full Name:</label>
                     <input type="text" id="name" name="name" required minLength="3"/>
