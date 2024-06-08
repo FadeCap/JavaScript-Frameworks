@@ -10,6 +10,9 @@ export default function Navbar() {
       </Link>
       <ul className="navLinks flex p-0 m-0 gap-4 list-none">
         <CustomLink to="/" className="nav-link">Home</CustomLink>
+        <li>
+          <CustomLink to="/contact" className="nav-link">Contact</CustomLink>
+        </li>
         <li className="nav-link">
           <CartButton />
         </li>
