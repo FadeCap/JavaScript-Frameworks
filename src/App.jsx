@@ -1,10 +1,10 @@
 import React from "react";
-import Layout from "./components/Layout";
-import ProductPage from "./pages/Product";
-import CheckoutPage from "./pages/Checkout";
-import CartPage from "./pages/Cart";
-import ContactPage from "./pages/Contact";
-import HomePage from "./pages/Home";
+import Layout from "./components/Layout/index.jsx";
+import ProductPage from "./pages/Product/index.jsx";
+import CheckoutPage from "./pages/Checkout/index.jsx";
+import CartPage from "./pages/Cart/index.jsx";
+import ContactPage from "./pages/Contact/index.jsx";
+import HomePage from "./pages/Home/index.jsx";
 import { Route, Routes } from "react-router-dom";
 import { CartProvider } from "./components/services/CartContext/index.jsx"
 import "./App.css";
