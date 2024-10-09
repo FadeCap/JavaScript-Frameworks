@@ -12,8 +12,6 @@ An e-commerce store where a user can add/remove items from their carts. There is
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
 - [React.js](https://reactjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 
@@ -44,7 +42,5 @@ npm run dev
 ```
 
 ## Contact
-
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
 [My LinkedIn page](https://www.linkedin.com/in/stian-busengdal/)
